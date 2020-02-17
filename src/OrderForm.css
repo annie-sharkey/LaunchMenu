@@ -1,0 +1,24 @@
+.orderHeader {
+  font-family: "Montserrat";
+  font-size: 40px;
+  text-align: center;
+  /* margin-top: 40px; */
+}
+
+.total {
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.removeButton {
+  margin-top: 10px;
+  border-color: #ffcccb;
+  font-weight: bolder;
+  color: #ffcccb;
+  font-size: 15px;
+  border-style: double;
+  padding: 6px;
+}

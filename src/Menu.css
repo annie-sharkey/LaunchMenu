@@ -29,7 +29,7 @@ h6 {
   display: inline;
 }
 
-button {
+.addButton {
   margin-top: 10px;
   border-color: #c7eae5;
   font-weight: bolder;

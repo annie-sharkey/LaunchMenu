@@ -5,7 +5,7 @@ import OrderForm from "./OrderForm.js";
 
 function App() {
   return (
-    <div className="App">
+    <div style={{ display: "flex" }}>
       <div
         style={{
           flex: 2
@@ -14,7 +14,7 @@ function App() {
         <Menu />
       </div>
 
-      <div style={{ color: "orange", flex: 1, borderStyle: "double" }}>
+      <div style={{ flex: 1 }}>
         <OrderForm />
       </div>
     </div>

@@ -10,13 +10,19 @@ const mainCourses = [
 ];
 
 const mainCourse = (title, description, price) => {
+  const title1 = title;
   return (
     <div className="menuItem">
       <h2>{title}</h2>
       <h6>{description}</h6>
       <h6> .............. {price}</h6>
       <div>
-        <button>Add to order</button>
+        <button
+          className="addButton"
+          onClick={() => console.log("Button clicked", title1)}
+        >
+          Add to order
+        </button>
       </div>
     </div>
   );
