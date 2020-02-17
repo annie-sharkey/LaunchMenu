@@ -1,0 +1,43 @@
+header {
+  font-family: "Dancing Script", cursive;
+  font-size: 80px;
+  text-align: center;
+  background-image: linear-gradient(#c7eae5, #09b2a4);
+  color: white;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-radius: 0 0 85% 85% / 60%;
+}
+
+.menuItem {
+  font-family: "Montserrat";
+  margin: 30px 30px 0 30px;
+  /* background: pinsk; */
+}
+
+h2 {
+  font-size: 40px;
+  color: #09b2a4;
+  margin: 0;
+}
+
+h6 {
+  font-size: 20px;
+  font-family: "Dancing Script", cursive;
+  color: gray;
+  font-style: italic;
+  margin: 0;
+  display: inline;
+  /* flex-direction: row; */
+}
+
+button {
+  margin-top: 10px;
+  border-color: #c7eae5;
+  font-weight: bolder;
+  color: #c7eae5;
+  font-size: 15px;
+  border-style: double;
+  /* background: #c7eae5; */
+  padding: 6px;
+}
