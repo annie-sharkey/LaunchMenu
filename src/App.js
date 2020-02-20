@@ -1,24 +1,71 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Menu from "./Menu.js";
 import OrderForm from "./OrderForm.js";
 
-function App() {
-  return (
-    <div style={{ display: "flex" }}>
-      <div
-        style={{
-          flex: 2
-        }}
-      >
-        <Menu />
-      </div>
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      orders: []
+    };
+  }
 
-      <div style={{ flex: 1 }}>
-        <OrderForm />
+  handleAddtoOrder = main => {
+    this.setState((prevState, props) => {
+      return { orders: [...prevState.orders, main] };
+    });
+  };
+
+  handleRemoveOrder = main => {
+    const newOrders = this.state.orders.filter(
+      order => order.title !== main.title
+    );
+    this.setState(prevState => {
+      return {
+        orders: newOrders
+      };
+    });
+  };
+
+  render() {
+    return (
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            flex: 2
+          }}
+        >
+          <Menu handleAddtoOrder={this.handleAddtoOrder} />
+        </div>
+
+        <div style={{ flex: 1 }}>
+          <OrderForm
+            orders={this.state.orders}
+            handleRemoveOrder={this.handleRemoveOrder}
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+// function App() {
+//   return (
+//     <div style={{ display: "flex" }}>
+//       <div
+//         style={{
+//           flex: 2
+//         }}
+//       >
+//         <Menu />
+//       </div>
+
+//       <div style={{ flex: 1 }}>
+//         <OrderForm />
+//       </div>
+//     </div>
+//   );
+// }
 
 export default App;
