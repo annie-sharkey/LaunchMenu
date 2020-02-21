@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Menu from "./Menu.js";
 import OrderForm from "./OrderForm.js";
+import Button from "./Button.js";
 
 class App extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <div style={{ display: "flex" }}>
-        <div
+        {/* <div
           style={{
             flex: 2
           }}
@@ -44,7 +45,8 @@ class App extends Component {
             orders={this.state.orders}
             handleRemoveOrder={this.handleRemoveOrder}
           />
-        </div>
+        </div> */}
+        <Button />
       </div>
     );
   }
