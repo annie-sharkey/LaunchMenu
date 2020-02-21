@@ -1,24 +1,6 @@
 import React, { Component } from "react";
 import "./OrderForm.css";
 
-const orderedItem = (title, price) => {
-  return (
-    <div style={{ margin: "30px" }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          fontSize: "20px"
-        }}
-      >
-        <div>{title}</div>
-        <div>{price}</div>
-      </div>
-      <button className="removeButton">Remove</button>
-    </div>
-  );
-};
-
 class OrderForm extends Component {
   constructor(props) {
     super(props);
@@ -39,16 +21,6 @@ class OrderForm extends Component {
           description: "Nice description woot 3",
           price: 10
         }
-        // {
-        //   title: "Main Course 4",
-        //   description: "Nice description woot 3",
-        //   price: 10
-        // },
-        // {
-        //   title: "Main Course 5",
-        //   description: "Nice description woot 3",
-        //   price: 10
-        // }
       ]
     };
   }
@@ -66,7 +38,21 @@ class OrderForm extends Component {
           Your Order
         </div>{" "}
         {this.state.orders.map(order => {
-          return orderedItem(order.title, order.price);
+          return (
+            <div style={{ margin: "30px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  fontSize: "20px"
+                }}
+              >
+                <div>{order.title}</div>
+                <div>{order.price}</div>
+              </div>
+              <button className="removeButton">Remove</button>
+            </div>
+          );
         })}
         <div className="total">Total cost: {totalCost}</div>
       </div>
