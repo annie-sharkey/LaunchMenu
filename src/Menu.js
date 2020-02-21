@@ -8,20 +8,6 @@ const mainCourses = [
   { title: "Main Course 3", description: "Nice description woot 3", price: 10 },
   { title: "Main Course 3", description: "Nice description woot 3", price: 10 }
 ];
-//https://www.willhough.com/menu/
-
-const mainCourse = (title, description, price) => {
-  return (
-    <div className="menuItem">
-      <h2>{title}</h2>
-      <h6>{description}</h6>
-      <h6> .............. {price}</h6>
-      <div>
-        <button>Add to order</button>
-      </div>
-    </div>
-  );
-};
 
 const Menu = () => {
   return (
@@ -30,9 +16,16 @@ const Menu = () => {
       <div
         style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
       >
-        {mainCourses.map(main =>
-          mainCourse(main.title, main.description, main.price)
-        )}
+        {mainCourses.map(main => (
+          <div className="menuItem">
+            <h2>{main.title}</h2>
+            <h6>{main.description}</h6>
+            <h6> .............. {main.price}</h6>
+            <div>
+              <button className="menuButton">Add to order</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
